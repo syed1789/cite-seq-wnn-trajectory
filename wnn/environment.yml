@@ -1,0 +1,13 @@
+name: cite-seq-wnn
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.4
+  - r-seurat
+  - r-hdf5r
+  - r-data.table
+  - r-ggplot2
+  - r-dplyr
+  - r-patchwork
+  - r-cowplot
