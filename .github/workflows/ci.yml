@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    name: shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint shell and sbatch scripts
+        run: shellcheck -S warning run_analysis.sh aws/launch_ec2.sh hpc/submit_slurm.sbatch
+
+  dry-run:
+    name: run_analysis.sh dry run (docker and apptainer)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: DRY_RUN=1 ./run_analysis.sh run
+      - run: RUNTIME=apptainer DRY_RUN=1 ./run_analysis.sh run
