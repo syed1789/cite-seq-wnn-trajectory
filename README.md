@@ -1,5 +1,7 @@
 # CITE-seq WNN Integration + Monocle3 Trajectory
 
+[![CI](https://github.com/syed1789/cite-seq-wnn-trajectory/actions/workflows/ci.yml/badge.svg)](https://github.com/syed1789/cite-seq-wnn-trajectory/actions/workflows/ci.yml)
+
 **Author:** Syed Nurul Hasan, Ph.D.
 **Contact:** nayanchoton1789@gmail.com | [ORCID: 0000-0002-4564-872X](https://orcid.org/0000-0002-4564-872X)
 
